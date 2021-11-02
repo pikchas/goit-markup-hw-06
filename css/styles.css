@@ -105,6 +105,7 @@ body {
     margin-top: 12px;
 }
 .form-group {
+    position: relative;
     display: flex;
     flex-direction: column;
 }
@@ -115,16 +116,32 @@ body {
     color: var(--second-text-color);
 }
 .form-group input {
+    
     margin: 0;
     margin-top: 4px;
-    padding: 11px 12px;    
+    padding: 11px 12px 11px 42px;
+    /* padding-left: 42px;     */
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
 }
-.form-group:hover input {
+.form-group:hover input,
+.form-group:focus input {
     border: 1px solid #2196F3;
+    
+}
+.icon-form {
+    position: absolute;
+    bottom: 11px;
+    left: 12px;
+    width: 18px;
+    height: 18px;
+    fill: var(--dark);
+}
+.form-group:hover .icon-form,
+.form-group:focus .icon-form {
+    fill: var(--accent-color);
 }
 .form-group textarea {
     margin-top: 4px;
@@ -133,6 +150,10 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
+}
+.form-group:hover textarea {
+    border: 1px solid #2196F3;
+    
 }
 .form-group:not(:first-child) {
     margin-top: 10px;

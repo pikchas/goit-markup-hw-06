@@ -74,6 +74,7 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     cursor: pointer;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 .icon-vector {
@@ -120,11 +121,12 @@ body {
     margin: 0;
     margin-top: 4px;
     padding: 11px 12px 11px 42px;
-    /* padding-left: 42px;     */
+    
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group:hover input,
 .form-group:focus input {
@@ -138,6 +140,7 @@ body {
     width: 18px;
     height: 18px;
     fill: var(--dark);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group:hover .icon-form,
 .form-group:focus .icon-form {
@@ -150,6 +153,7 @@ body {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     cursor: pointer;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group:hover textarea {
     border: 1px solid #2196F3;
@@ -169,8 +173,40 @@ textarea {
     line-height: 1.71;
     color: var(--second-text-color);
 }
-.checkbox-link {
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.71;
+    color: var(--second-text-color);
+}
+.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
     
+}
+.checkbox:checked ~ .box-icon-check {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+.box-icon-check {
+    display: flex;
+    align-items: center;
+    width: 16px;
+    height: 15px;
+    margin-right: 7px;
+    border: 1px solid #212121;
+    border-radius: 2px;
+    background-origin: border-box;
+}
+
+
+.checkbox-link {
+    font-size: 14px;
+    line-height: 1.71;
     color: var(--accent-color);
 }
 .btn-modal {
@@ -188,7 +224,8 @@ textarea {
     border: none;
     border-radius: 4px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-
+    margin-top: 30px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .btn-modal:hover,
 .btn-modal:focus {

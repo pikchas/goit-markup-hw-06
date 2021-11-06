@@ -425,10 +425,17 @@
                     <label for="comment">Комментарий</label>
                     <textarea name="inform-user" id="comment"  rows="8" placeholder="Введите текст"></textarea>
                 </div>
-                <div class="form-group">
-                    <input type="checkbox" name="police" id="police">
-                    <label for="police">Соглашаюсь с рассылкой и принимаю <a href="" class="checkbox-link">Условия договора</a></label>
-                </div>                            
+                                    
+                <label class="checkbox-label" >
+                    <input class="checkbox" type="checkbox" name="police" >
+                    <span class="box-icon-check">
+                        <svg class="icon-check">
+                            <use href="./images/symbol-defs.svg#icon-icon-check"></use>
+                        </svg>
+                    </span>
+                    Соглашаюсь с рассылкой и принимаю <a href="" class="checkbox-link"> Условия договора</a>
+                </label>
+                                            
                         
             </form>
             <button type="submit" class="btn-modal">Отправить</button>

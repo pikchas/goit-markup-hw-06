@@ -129,9 +129,13 @@ body {
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group:hover input,
-.form-group:focus input {
-    border: 1px solid #2196F3;
+.form-group:focus-within input {
+    border-color: var(--accent-color);
     
+}
+
+.input {
+    border-color: var(--accent-color);
 }
 .icon-form {
     position: absolute;
@@ -143,7 +147,7 @@ body {
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-group:hover .icon-form,
-.form-group:focus .icon-form {
+.form-group:focus-within .icon-form {
     fill: var(--accent-color);
 }
 .form-group textarea {
@@ -155,8 +159,9 @@ body {
     cursor: pointer;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.form-group:hover textarea {
-    border: 1px solid #2196F3;
+.form-group:hover textarea,
+.form-group:focus-within textarea {
+    border-color: var(--accent-color);
     
 }
 .form-group:not(:first-child) {
@@ -201,8 +206,12 @@ textarea {
     border: 1px solid #212121;
     border-radius: 2px;
     background-origin: border-box;
+    cursor: pointer;
 }
-
+.box-icon-check:hover,
+.box-icon-check:focus {
+    border-color: var(--accent-color);
+}
 
 .checkbox-link {
     font-size: 14px;

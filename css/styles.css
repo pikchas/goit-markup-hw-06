@@ -24,7 +24,7 @@ body {
     font-weight: 400;
     color: var(--primary-text-color);
     letter-spacing: 0.03em;
-    /* padding-top: 80px; */
+    padding-top: 80px;
 }
 .backdrop {
     position: fixed;
@@ -273,9 +273,10 @@ textarea {
 }
 /* ---------header--------- */
 .header {
-    /* position: fixed;
+    position: fixed;
     top: 0;
-    width: 100%; */
+    width: 100%;
+    z-index: 1;
     min-height: 80px;
     border-bottom: 1px solid #ECECEC;
     padding-top: 24px;
